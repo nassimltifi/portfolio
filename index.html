@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nassim LTIFI | Portfolio BTS SIO</title>
+    <style>
+        /* --- CONFIGURATION ET COULEURS --- */
+        :root {
+            --bg-dark: #0f172a;       /* Fond sombre */
+            --bg-card: #1e293b;       /* Fond des cartes */
+            --accent-blue: #38bdf8;   /* Bleu électrique SIO */
+            --text-white: #f1f5f9;    /* Texte principal */
+            --text-gray: #94a3b8;     /* Texte secondaire */
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-white);
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+
+        /* --- NAVIGATION --- */
+        nav {
+            position: fixed;
+            top: 0; width: 100%;
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(8px);
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(56, 189, 248, 0.2);
+        }
+
+        .logo { font-weight: bold; font-size: 1.2rem; color: var(--accent-blue); text-transform: uppercase; }
+        .nav-links { display: flex; list-style: none; }
+        .nav-links li { margin-left: 20px; }
+        .nav-links a { text-decoration: none; color: var(--text-white); font-weight: 500; transition: 0.3s; }
+        .nav-links a:hover { color: var(--accent-blue); }
+
+        /* --- SECTION ACCUEIL --- */
+        header {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: radial-gradient(circle at center, #1e293b 0%, #0f172a 100%);
+            padding: 0 20px;
+        }
+
+        header h1 { font-size: 3.5rem; margin-bottom: 10px; }
+        header h1 span { color: var(--accent-blue); }
+        header p { font-size: 1.2rem; color: var(--text-gray); max-width: 700px; }
+
+        /* --- STYLE DES SECTIONS --- */
+        section { padding: 80px 10%; border-bottom: 1px solid rgba(255,255,255,0.05); }
+        h2 { font-size: 2.2rem; color: var(--accent-blue); margin-bottom: 40px; text-align: center; text-transform: uppercase; }
+
+        .container { max-width: 1000px; margin: 0 auto; }
+
+        /* --- CARTES ET GRILLES --- */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: var(--bg-card);
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid rgba(56, 189, 248, 0.1);
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            border-color: var(--accent-blue);
+        }
+
+        .card h3 { color: var(--accent-blue); margin-bottom: 15px; }
+
+        /* --- BOUTONS --- */
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 25px;
+            background-color: var(--accent-blue);
+            color: #0f172a;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn:hover { background-color: #7dd3fc; transform: scale(1.05); }
+
+        /* --- VEILLE TECHNOLOGIQUE --- */
+        .veille-box {
+            border-left: 4px solid var(--accent-blue);
+            padding: 20px;
+            background: rgba(56, 189, 248, 0.05);
+            margin-bottom: 20px;
+        }
+        .veille-date { font-weight: bold; color: var(--accent-blue); display: block; margin-bottom: 5px; }
+
+        footer { text-align: center; padding: 40px; color: var(--text-gray); font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">Nassim LTIFI</div>
+        <ul class="nav-links">
+            <li><a href="#accueil">Accueil</a></li>
+            <li><a href="#qui-suis-je">Moi</a></li>
+            <li><a href="#competences">Compétences</a></li>
+            <li><a href="#realisations">Réalisations</a></li>
+            <li><a href="#veille">Veille</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header id="accueil">
+        <h1>Salut, je suis <span>Nassim LTIFI</span></h1>
+        <p>Étudiant en BTS SIO. Bienvenue sur mon portfolio professionnel dédié aux solutions informatiques et aux infrastructures.</p>
+        <a href="#realisations" class="btn">Voir mes travaux</a>
+    </header>
+
+    <section id="qui-suis-je">
+        <h2>Qui suis-je ?</h2>
+        <div class="container card">
+            <p><strong>Identité :</strong> Nassim Ltifi, étudiant en Services Informatiques aux Organisations.</p>
+            <p><strong>Parcours :</strong> Passionné par la technologie, je développe mes compétences en administration système et réseau.</p>
+            <p><strong>Actualité :</strong> En formation continue, je réalise divers projets techniques pour valider mes compétences E5.</p>
+            <a href="CV_Nassim_LTIFI.pdf" class="btn" download>📥 Télécharger mon CV</a>
+        </div>
+    </section>
+
+    <section id="competences">
+        <h2>Mes Compétences</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>🛠️ Outils & Langages</h3>
+                <p>Visual Studio Code, Git, HTML, CSS, PHP, SQL.</p>
+            </div>
+            <div class="card">
+                <h3>🖥️ Systèmes & OS</h3>
+                <p>Windows 10/11, Windows Server, Linux (Debian, Ubuntu).</p>
+            </div>
+            <div class="card">
+                <h3>🌐 Réseaux</h3>
+                <p>Cisco Packet Tracer, adressage IP, configuration de switchs et routeurs.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="realisations">
+        <h2>Mes Réalisations</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Projet d'Atelier (AP)</h3>
+                <p>Mise en place d'une infrastructure réseau client-serveur.</p>
+                <a href="tp_architecture_client_serveur.pdf" class="btn" style="background:none; border:1px solid var(--accent-blue); color:var(--accent-blue);">En savoir plus</a>
+            </div>
+            <div class="card">
+                <h3>Stage Professionnel</h3>
+                <p>Support technique et gestion de parc informatique au sein de [Nom Entreprise].</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="veille">
+        <h2>Veille Technologique</h2>
+        <div class="container">
+            <div class="veille-box">
+                <span class="veille-date">22 Janvier 2026</span>
+                <h3>Cybersécurité : Les nouvelles menaces</h3>
+                <p>Analyse des attaques par ransomware en 2025 et solutions de protection.</p>
+                <a href="https://www.zdnet.fr/ransomware-4000237544q.htm" target="_blank" style="color:var(--accent-blue);">Lien vers l'article</a>
+            </div>
+            <p><strong>Mes sources :</strong> Le Monde Informatique, ZDNet, Next.</p>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <div class="container" style="text-align: center;">
+            <div class="card">
+                <p>📧 Email : nassimltifi@outlook.fr</p>
+                <p>🔗 LinkedIn : <a href="https://www.linkedin.com/in/nassim-ltifi-9082782b9/" style="color:var(--accent-blue);">Nassim LTIFI</a></p>
+                <p>📍 Localisation : La Roche Sur Foron France</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 - Portfolio Nassim LTIFI - Créé pour le BTS SIO</p>
+    </footer>
+
+</body>
+</html>
